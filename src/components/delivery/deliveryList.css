@@ -1,0 +1,19 @@
+.DeliveryList {
+  margin: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.DeliveryList ul {
+  display: flex;
+  flex-flow: row;
+}
+
+.DeliveryList li {
+  list-style: none;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 30%;
+  margin-left: 10%;
+}

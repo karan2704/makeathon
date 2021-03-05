@@ -1,0 +1,14 @@
+.item {
+  height: 150px;
+  width: 100%;
+  margin: auto;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item img {
+  width: 180px;
+  border-radius: 20px;
+}

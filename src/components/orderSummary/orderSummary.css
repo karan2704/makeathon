@@ -1,0 +1,8 @@
+.ordersummary {
+  text-align: left;
+  padding: 5px;
+}
+
+.ordersummary ul {
+  list-style: none;
+}

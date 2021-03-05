@@ -1,0 +1,15 @@
+.itemList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itemList li {
+  list-style: none;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 0 32px;
+  margin: 10px auto;
+  margin-left: 20px;
+}
