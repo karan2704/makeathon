@@ -16,7 +16,8 @@ const ItemList = (props) => {
             img={props.prodList[prodKey].img}
             quantity = {props.cart[props.prodList[prodKey].name]}
             add={props.addToCart}
-            remove={props.removeFromCart} />
+            remove={props.removeFromCart}
+            />
             </li>
             
         )})

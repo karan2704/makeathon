@@ -6,7 +6,7 @@
 
 .DeliveryList ul {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
 }
 
 .DeliveryList li {
@@ -15,5 +15,7 @@
   border: 1px solid black;
   border-radius: 5px;
   width: 30%;
-  margin-left: 10%;
+  min-width: 350px;
+  margin: 10px;
+  margin-left: 30%;
 }

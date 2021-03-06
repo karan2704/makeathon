@@ -10,11 +10,10 @@ const DeliveryList = (props) => {
         return(
             <li key = {delKey}>
                 <Delivery 
-                
                 imgLink = {props.deliveryList[delKey].img} 
                 name = {props.deliveryList[delKey].type}
                 charge = {props.deliveryList[delKey].cost}
-                showMap = {props.showMap} />
+                selectLocation = {props.selectLocation} />
             </li>
         
     )})

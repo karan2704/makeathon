@@ -8,6 +8,8 @@ const Item = props => {
     if (props.quantity === 0){
         disable = true
     }
+
+   
     return(
         <React.Fragment>
         <div className='item'>

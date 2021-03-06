@@ -6,7 +6,7 @@ const Delivery = (props) => {
     return (
         <div 
         className='delivery'
-        onClick={props.showMap}>
+        onClick={() => props.selectLocation(props.name)}>
             <img src={props.imgLink} alt='img' />
             <h3>{props.name}</h3>
             <p>Delivery charges: <strong>{props.charge}</strong></p>

@@ -15,7 +15,8 @@ class ListDiplay extends Component {
             Meat:0
         },
         totalPrice: 0,
-        checkingOut: false
+        checkingOut: false,
+        disableCheckout: false
     }
 
         
@@ -65,6 +66,9 @@ class ListDiplay extends Component {
     
 
     render () {
+        
+       
+
         return (
             <React.Fragment>
                 <Backdrop 
@@ -81,8 +85,19 @@ class ListDiplay extends Component {
                 cart = {this.state.cart}
                 addToCart = {this.additionHandler}
                 removeFromCart = {this.removalHandler}
-                prodList = {this.products} />
-                <button onClick={this.checkoutHandler}>Checkout</button>
+                prodList = {this.products}
+                />
+                <button 
+                style = {{
+                    width:'10rem',
+                    backgroundColor:'#9ecca4',
+                    height: '3rem',
+                    margin: '10px auto',
+                    boxSizing: 'border-box',
+                    borderRadius: '10px'
+                }}
+                disabled={this.state.disableCheckout} 
+                onClick={this.checkoutHandler}>Checkout</button>
             </React.Fragment>
             
         )
