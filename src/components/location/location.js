@@ -22,7 +22,7 @@ const Location = props => {
         <form>
             <label>Address: </label> 
             <input name='address' required={true}/>
-            <button className='btn' type='submit'><Link to="/payment">Submit</Link></button>
+            <button className='btn' type='submit'><Link style={{textDecoration: 'none', color: 'black'}}to="/payment">Submit</Link></button>
         </form>
     )
 }

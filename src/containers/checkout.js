@@ -47,6 +47,29 @@ class CheckOut extends Component {
         },
     }
 
+    cities = {
+        1: {
+            name: 'Shanti Niketan',
+            lat: 28.5770405,
+            lng: 77.1650951
+        },
+        2: {
+            name: 'Vasant Kunj',
+            lat: 28.5267235,
+            lng: 77.1180048
+        },
+        3: {
+            name: 'Greater Kailash',
+            lat: 28.6498778,
+            lng: 77.3375513
+        },
+        4: {
+            name: 'Green Park',
+            lat: 28.5442478,
+            lng: 77.2217264
+        },
+    }
+
 
 
     deliveryTypes = {
@@ -99,15 +122,28 @@ class CheckOut extends Component {
                     <li key={stnKey}>
                         <button 
                         onClick={() => {this.showMapModalHandler(this.stations[stnKey].lat, this.stations[stnKey].lng)}} 
-                        style={{margin: '10px'}}>
+                        style={{margin: '15px 20px', height: '2rem', width: '15rem', borderRadius: '20px', backgroundColor:'#693c72', color:"white"}}>
                             {this.stations[stnKey].name}
                         </button>
                     </li>
             )
         })
 
+        const cityArr = Object.keys(this.cities)
+        .map(cityKey => {
+            return (
+                    <li key={cityKey}>
+                        <button 
+                        onClick={() => {this.showMapModalHandler(this.cities[cityKey].lat, this.cities[cityKey].lng)}} 
+                        style={{margin: '15px 20px', height: '2rem', width: '15rem', borderRadius: '20px', backgroundColor:'#693c72', color:"white"}}>
+                            {this.cities[cityKey].name}
+                        </button>
+                    </li>
+            )
+        })
+
         if(this.state.locationSelectModalType === 'Drone'){
-            modalContent = stationArr
+            modalContent = cityArr
         }
         else if(this.state.locationSelectModalType === 'Delivery Partner'){
             modalContent = <Location />
@@ -139,10 +175,15 @@ class CheckOut extends Component {
                        <MapHolder 
                         lat={this.state.address.center.lat}
                         lng={this.state.address.center.lng}
-                        text="My Marker"/>  
+                        text="•"/>  
                     </GoogleMapReact>
-                    <button><Link to='/payment'>Confirm</Link></button>
-                    <button onClick={this.closeModals}>Cancel</button>
+                    <button 
+                    style={{width: '5rem', height: '2rem',margin:'auto 5px', borderRadius: '20px', backgroundColor:'#9ecca4'}}>
+                        <Link style={{textDecoration: 'none', color: 'black'}} to='/payment'>Confirm</Link>
+                    </button>
+                    <button 
+                    style={{width: '5rem', height: '2rem', margin:'auto 5px', borderRadius: '20px', backgroundColor:'#c15050', color: 'white'}}
+                    onClick={this.closeModals}>Cancel</button>
                 </Modal>
                 <DeliveryList
                 selectLocation = {this.showLocationSelectModal}

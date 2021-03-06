@@ -8,7 +8,8 @@ const OrderSummary = props => {
     let disableProceed = true
     const finalOrder = Object.keys(props.cart)
     .map(cartKey => {
-        return (<li key={cartKey}>
+        return (
+        <li key={cartKey}>
             <strong>{cartKey}: {props.cart[cartKey]}</strong>
         </li>)
     })
@@ -24,13 +25,15 @@ const OrderSummary = props => {
             {finalOrder}
             </ul>
             <p><span>Your Total: <strong>Rs. {props.cost}</strong></span></p>
-            <button>
-            <Link style={disableProceed ? {pointerEvents: 'none', textDecoration: 'none'} : {textDecoration: 'none'}} 
+            <button style={{width: '5rem', height: '2rem',margin:'auto 5px', borderRadius: '20px', backgroundColor:'#9ecca4'}} >
+            <Link style={{textDecoration: 'none', color: 'black'}}
             to="/checkout">
             Proceed
             </Link>
             </button>
-            <button onClick={props.cancel}>Cancel</button>
+            <button 
+            style={{width: '5rem', height: '2rem', margin:'auto 5px', borderRadius: '20px', backgroundColor:'#c15050', color: 'white'}}
+            onClick={props.cancel}>Cancel</button>
         </div>
     )
 }

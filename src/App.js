@@ -16,8 +16,8 @@ function App() {
   return (
     <React.Fragment>
       <div className='Toolbar'>
-        <div className='Logo'>GROCERY</div>
-        <div className='Menu'>Cart</div>
+        <div className='Logo'><h2>GROCERY</h2></div>
+        <div className='Menu'><h4>CART</h4></div>
       </div>
       <div className="App">
       <Router>

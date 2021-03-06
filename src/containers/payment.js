@@ -2,7 +2,6 @@ import React from 'react'
 import Web3 from "web3"
 import Web3Connect from "web3connect"
 import Portis from '@portis/web3';
-
 import Backdrop from '../components/UI/backdrop/backdrop';
 // "cdb8a7bb-2dfb-4e06-a9c2-28cd4a9e58f0"
  
@@ -35,7 +34,7 @@ const Payment = async() => {
 
           return(
               <div>
-                  <Backdrop show={true}/>
+                  <h3>Pay using Portis</h3>
               </div>
           )
 }
